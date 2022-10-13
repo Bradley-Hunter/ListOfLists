@@ -8,17 +8,16 @@ public class Main {
     private static Main m;
     static Scanner scan = new Scanner(System.in);
     private static HashMap<String, ArrayList<String>> listOfLists; // = new HashMap<String, ArrayList<String>>()
-    private static String filename = "list.txt";
 
-    private Main(){
-        m.viewMenu = new ViewMenu();
-        m.addMenu = new AddMenu();
-        m.mainMenu = new MainMenu();
-
-    }
-
+    // private Main(){
+        
+    // }
+    
     public static void main(String[] args) throws ClassNotFoundException{
         m = new Main();
+        m.mainMenu = new MainMenu();
+        m.viewMenu = new ViewMenu();
+        m.addMenu = new AddMenu();
         boolean done = false;
         m.GetListFromFile(m.GetFilename());
         while (!done)
@@ -41,11 +40,11 @@ public class Main {
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
-            e.printStackTrace();
+            // e.printStackTrace();
         }
     }
     private String GetFilename(){
-        System.out.println("What file do you want to open from/save to? ");
+        System.out.print("What file do you want to open from/save to? ");
         return scan.nextLine();
     }
     
@@ -59,10 +58,10 @@ public class Main {
         } catch (FileNotFoundException e) {
             listOfLists = new HashMap<String, ArrayList<String>>();
             System.out.println("File not found. Starting a new set of lists");
-            e.printStackTrace();
+            // e.printStackTrace();
         } catch (IOException e) {
             System.out.println("An error occurred.");
-            e.printStackTrace();
+            // e.printStackTrace();
         }
 
     }
