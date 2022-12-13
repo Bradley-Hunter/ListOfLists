@@ -27,4 +27,3 @@ This project is a program that demonstrates basic proficentcy in the Java progra
 {Make a list of things that you need to fix, improve, and add in the future.}
 * Add a GUI to project
 * Perform a Check on the Object conversion to a HashMap<String, ArrayList\<String>> object instead of a unchecked conversion.
-* Item 3

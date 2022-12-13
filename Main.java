@@ -7,11 +7,7 @@ public class Main {
     private ViewMenu viewMenu;
     private static Main m;
     static Scanner scan = new Scanner(System.in);
-    private static HashMap<String, ArrayList<String>> listOfLists; // = new HashMap<String, ArrayList<String>>()
-
-    // private Main(){
-        
-    // }
+    private static HashMap<String, ArrayList<String>> listOfLists;
     
     public static void main(String[] args) throws ClassNotFoundException{
         m = new Main();
@@ -144,6 +140,9 @@ public class Main {
             if (!firstRun)
             {
                 DisplayCurrentList(name);
+            }
+            else{
+                firstRun = false;
             }
             m.viewMenu.DisplayMenu(m.viewMenu.GetMenu());
             String option = GetCurrentOption();
